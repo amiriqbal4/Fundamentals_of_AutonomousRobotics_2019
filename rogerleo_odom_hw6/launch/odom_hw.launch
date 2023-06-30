@@ -1,0 +1,7 @@
+<launch>
+
+    <param name="/odom_csv_file_name" value="$(find odometry_hw)/wheel_ticks.csv" />
+    <node pkg="rogerleo_odom_hw6" name="wheel_tick_pub" type="wheel_tick_pub.py"/>
+    <node pkg="rogerleo_odom_hw6" name="odom_calc" type="odom_calc.py"/>
+
+</launch>
