@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <arg name="pkg_name" value="fp_gt_and_oa"/>
+    <arg name="node_1" default="obstacle_and_goal_filter"/>
+    <arg name="node_2" default="goal_tracking_controller"/>
+    <arg name="veh" doc="amirfr"/>
+    <arg name="config" default="baseline" doc="Specify a config."/>
+
+    <group ns="$(arg veh)">
+        <node  name="$(arg node_1)" pkg="$(arg pkg_name)" type="$(arg node_1).py" output="screen" clear_params="true" required="true"/>
+	<node  name="$(arg node_2)" pkg="$(arg pkg_name)" type="$(arg node_2).py" output="screen" clear_params="true" required="true"/>
+    </group>
+</launch>
