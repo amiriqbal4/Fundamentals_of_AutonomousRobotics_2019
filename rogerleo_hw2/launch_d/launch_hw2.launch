@@ -1,0 +1,5 @@
+<launch>
+  <node name="node_1" pkg="rogerleo_hw2" type="node_1.py" />
+  <node name="node_2_sub" pkg="rogerleo_hw2" type="node_2_sub.py" />
+  <node name="node_3" pkg="rogerleo_hw2" type="node_3.py" />
+</launch>
